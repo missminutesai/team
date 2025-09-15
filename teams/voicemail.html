@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f2f1;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background-color: #fff;
+            padding: 28px 18px 24px 18px;
+            border-radius: 14px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+            max-width: 340px;
+            width: 40%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo {
+            max-width: 48px;
+            margin-bottom: 12px;
+        }
+        h1 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin: 0 0 10px 0;
+        }
+        p {
+            font-size: 15px;
+            color: #666;
+            margin: 0 0 18px 0;
+        }
+        .button {
+            background-color: #6264a7;
+            color: white;
+            padding: 12px 0;
+            text-decoration: none;
+            border-radius: 10px;
+            display: block;
+            width: 100%;
+            max-width: 210px;
+            margin: 8px auto;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            transition: background 0.2s, color 0.2s, border 0.2s;
+        }
+        .button:hover {
+            background-color: #4e4a96;
+        }
+        .footer {
+            margin: 18px auto 0 auto;
+            text-align: center;
+            padding-bottom: 24px;
+            width: 100%;
+        }
+        .footer .logo {
+            max-width: 36px;
+            margin-bottom: 6px;
+        }
+        .link {
+            color: #6264a7;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 14px;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 800px) {
+            .container {
+                width: 80%;
+                max-width: 98vw;
+                padding: 16px 4vw 18px 4vw;
+                margin-top: 0;
+            }
+        }
+        @media (max-width: 500px) {
+            .container {
+                width: 98vw;
+                max-width: 98vw;
+                padding: 12px 2vw 14px 2vw;
+                margin-top: 0;
+            }
+            h1 {
+                font-size: 17px;
+            }
+            .logo {
+                max-width: 36px;
+            }
+            .footer .logo {
+                max-width: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="team.png" alt="Teams Logo" class="logo">
+        <h1>Microsoft Teams</h1>
+        <p>Play Voicemail</p>
+        <!-- Only play button remains, no download/install buttons -->
+        <button class="button" id="playBtn">▷ ──── 02:53</button>
+    </div>
+    <div class="footer">
+        <img src="teams.jpg" alt="Teams Logo" class="logo">
+        <p style="margin-bottom:6px;">Click play to listen to the voicemail.</p>
+    </div>
+    <!-- Example audio element (replace src with actual voicemail file if needed) -->
+    <audio id="voicemailAudio" src="voicemail.mp3"></audio>
+    <script>
+        document.getElementById('playBtn').addEventListener('click', function(e){
+            e.preventDefault();
+            var audio = document.getElementById('voicemailAudio');
+            audio.currentTime = 0;
+            audio.play();
+        });
+    </script>
+</body>
+</html>
